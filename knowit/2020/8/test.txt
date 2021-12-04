@@ -1,0 +1,4 @@
+Rovianemi: (1, 1)
+Nordpolen: (3, 4)
+Rovianemi
+Nordpolen
