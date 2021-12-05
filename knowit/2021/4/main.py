@@ -18,12 +18,10 @@ diff = []
 for step in range(start_step, steps):
     if direction == 'north':
         y += 1
-        # print(f'{step}: {direction} ({x}, {y}) ', end='')
         if y % 3 == 0 and y % 5 != 0:
             direction = 'east'
     elif direction == 'east':
         x += 1
-        # print(f'{step}: {direction} ({x}, {y}) ', end='')
         if x % 5 == 0 and x % 3 != 0:
             direction = 'north'
     diff.append(x-y)
