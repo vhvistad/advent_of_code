@@ -1,0 +1,12 @@
+Start at step 42 -> difference = 7 (8)
+
+Pattern repeats every 45 steps after this
+
+Difference increases with 15 each 45 steps
+
+
+step 42 -> 8
+
+step 87 -> 23
+
+step 132 -> 38
