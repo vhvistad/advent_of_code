@@ -8,20 +8,6 @@ class Node:
         self.parent = parent
         self.children = []
 
-def recursive_depth(node):
-    prev_gen = 1
-    if len(node.children) > 0:
-        for child in node.children:
-            candidate = recursive_depth(child)
-            if candidate > prev_gen:
-                prev_gen = candidate
-        if node.name == 'Grinch':
-            return prev_gen
-        else:
-            return prev_gen + 1
-    else:
-        return prev_gen
-
 def make_tree(string):
     root = None
     current_node = None
@@ -51,6 +37,20 @@ def make_tree(string):
             name += char
     
     return root
+
+def recursive_depth(node):
+    prev_gen = 1
+    if len(node.children) > 0:
+        for child in node.children:
+            candidate = recursive_depth(child)
+            if candidate > prev_gen:
+                prev_gen = candidate
+        if node.name == 'Grinch':
+            return prev_gen
+        else:
+            return prev_gen + 1
+    else:
+        return prev_gen
 
 
 if __name__ == "__main__":
