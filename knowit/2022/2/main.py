@@ -10,12 +10,12 @@ for present in presents:
     if last_presents < 3:
         linecount += lines_to_add
         last_presents += 1
-        if re.search('alv', present) is not None:
+        if 'alv' in present:
             last_presents -= 1
     else:
         lines_to_add += 1
         linecount += lines_to_add
-        if re.search('alv', present) is not None:
+        if 'alv' in present:
             lines_to_add -=1
 
 print(linecount)
