@@ -1,3 +1,5 @@
+import time
+
 def shuffle(deck):
     first, second = deck[:len(deck)//2], deck[len(deck)//2 + len(deck)%2:]
     shuffled = []
@@ -31,13 +33,15 @@ def make_deck(size):
 
 if __name__ == "__main__":
     #deck = make_deck(52)
-    
+    start_time = time.time()
+
     size = 0
     shuffles = 0
     while shuffles != 13:
         size += 2
         deck = make_deck(size)
         shuffles = shuffles_needed(deck)
-        print(shuffles)
+        print(f'Deck-size = {size}')
 
-    print(size)
+    print(f'Result: {size} cards.')
+    print("--- Finished in %s seconds ---" % (time.time() - start_time))
