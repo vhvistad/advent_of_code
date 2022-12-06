@@ -1,0 +1,3 @@
+tagging:0.8
+banne i kirka:0.1
+bite:0.2
