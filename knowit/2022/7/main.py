@@ -1,13 +1,8 @@
 from PIL import Image
 
-def count_ones(n):
-    ones = bin(n).count(1)
-    return ones % 2 == 0
-
-width = 0
 height = 0
-
 encrypted = []
+
 with open('knowit/2022/7/encrypted.txt') as f:
     for line in f:
         height += 1
