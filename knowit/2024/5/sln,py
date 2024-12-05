@@ -1,0 +1,24 @@
+kandidater = []
+stater = []
+
+with open('kandidater.txt', 'r') as f:
+  for line in f.readlines():
+    kandidater.append(line.strip().split(' - '))
+
+with open('stater.txt', 'r') as f:
+  for line in f.readlines():
+    stat, _, vn, k = line.strip().split(' - ')
+    k01, k02, k03, k04 = k.split(', ')
+    votes = {
+      'k01': k01,
+      'k02': k02,
+      'k03': k03,
+      'k04': k04
+      }
+    stater.append()
+  
+for c in kandidater:
+  print(c)
+
+for c in kandidater:
+  print(c)
