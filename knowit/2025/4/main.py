@@ -13,14 +13,18 @@ energy = {
 }
 
 for c in track:
-    if e < 5:
+    required_e = energy[c] * 5
+    prev_e = (energy[prev[0]] + energy[prev[1]]) * 5
+
+    if e < required_e:
         break
-    if c == "P" and "I" not in prev and "P" not in prev:
-        e += energy[prev[0]] + energy[prev[1]]
-    else:
-        e -= energy[c] * 5
+
+    if c == "P" and prev_e > 0:
+        e += prev_e
+
+    e -= energy[c] * 5
     d += 10
-    prev.pop(1)
+    prev.pop()
     prev.insert(0, c)
 
 print(d)
